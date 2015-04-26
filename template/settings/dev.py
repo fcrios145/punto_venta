@@ -109,5 +109,5 @@ STATIC_ROOT = '/webapps/glucosetracker/static/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
-    os.path.join(PROJECT_ROOT, 'static'),
+    os.path.join(BASE_DIR, 'static'),
 )
