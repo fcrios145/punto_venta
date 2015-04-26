@@ -56,7 +56,7 @@ ROOT_URLCONF = 'template.urls'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'glucosetracker',
+        'NAME': 'template',
         'USER': os.environ['DATABASE_USER'],
         'PASSWORD': os.environ['DATABASE_PASSWORD'],
         'HOST': 'localhost',
