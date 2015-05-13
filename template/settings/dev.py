@@ -40,6 +40,7 @@ INSTALLED_APPS = (
 
     # aplicaciones que creamos nosotros, las tenemos que agregar en esta parte
     'blog',
+    'pipeline',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -113,4 +114,12 @@ STATIC_ROOT = '/webapps/glucosetracker/static/'
 # Additional locations of static files
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
+)
+
+STATICFILES_STORAGE = 'pipeline.storage.PipelineCachedStorage'
+
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'pipeline.finders.PipelineFinder',
 )
