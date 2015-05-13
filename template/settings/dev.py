@@ -155,17 +155,11 @@ PIPELINE_JS = {
     # ...
 }
 
-# Django-debug-toolbar config
-INSTALLED_APPS += ('debug_toolbar',)
-INTERNAL_IPS = (
-    '127.0.0.1',
-    '172.28.128.10',
+PIPELINE_COMPILERS = (
+    'pipeline.compilers.coffee.CoffeeScriptCompiler',
+    'pipeline.compilers.sass.SASSCompiler',
+    'pipeline.compilers.stylus.StylusCompiler',
 )
-MIDDLEWARE_CLASSES += \
-    ('debug_toolbar.middleware.DebugToolbarMiddleware', )
-
-DEBUG_TOOLBAR_CONFIG = {
-    'INTERCEPT_REDIRECTS': False,
-    'SHOW_TEMPLATE_CONTEXT': True,
-    'HIDE_DJANGO_SQL': False,
-}
+PIPELINE_COFFEE_SCRIPT_BINARY = '/usr/bin/coffee'
+PIPELINE_SASS_BINARY = '/usr/bin/sass'
+PIPELINE_STYLUS_BINARY = '/usr/bin/stylus'
