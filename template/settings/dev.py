@@ -123,3 +123,30 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
     'pipeline.finders.PipelineFinder',
 )
+
+
+# CSS Files.
+# PIPELINE_CSS = {
+#     # Project libraries.
+#     'libraries': {
+#         'source_filenames': (
+#             'bower_components/bootstrap/dist/css/bootstrap.css',
+#         ),
+#         # Compress passed libraries and have
+#         # the output in`css/libs.min.css`.
+#         'output_filename': 'css/libs.min.css',
+#     }
+#     # ...
+# }
+# JavaScript files.
+PIPELINE_JS = {
+    # Project JavaScript libraries.
+    'libraries': {
+        'source_filenames': (
+            'bower_components/jquery/dist/jquery.js',
+        ),
+        # Compress all passed files into `js/libs.min.js`.
+        'output_filename': 'js/libs.min.js',
+    }
+    # ...
+}
