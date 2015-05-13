@@ -124,6 +124,8 @@ STATICFILES_FINDERS = (
     'pipeline.finders.PipelineFinder',
 )
 
+PIPELINE_JS_COMPRESSOR = 'pipeline.compressors.uglifyjs.UglifyJSCompressor'
+
 
 # CSS Files.
 # PIPELINE_CSS = {
