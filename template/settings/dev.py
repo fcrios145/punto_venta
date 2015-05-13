@@ -41,7 +41,6 @@ INSTALLED_APPS = (
     # aplicaciones que creamos nosotros, las tenemos que agregar en esta parte
     'blog',
     'pipeline',
-    'debug_toolbar',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -154,4 +153,19 @@ PIPELINE_JS = {
         'output_filename': 'js/libs.min.js',
     }
     # ...
+}
+
+# Django-debug-toolbar config
+INSTALLED_APPS += ('debug_toolbar',)
+INTERNAL_IPS = (
+    '127.0.0.1',
+    '172.28.128.10',
+)
+MIDDLEWARE_CLASSES += \
+    ('debug_toolbar.middleware.DebugToolbarMiddleware', )
+
+DEBUG_TOOLBAR_CONFIG = {
+    'INTERCEPT_REDIRECTS': False,
+    'SHOW_TEMPLATE_CONTEXT': True,
+    'HIDE_DJANGO_SQL': False,
 }
