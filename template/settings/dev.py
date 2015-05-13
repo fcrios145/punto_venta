@@ -41,6 +41,7 @@ INSTALLED_APPS = (
     # aplicaciones que creamos nosotros, las tenemos que agregar en esta parte
     'blog',
     'pipeline',
+    'debug_toolbar',
 )
 
 MIDDLEWARE_CLASSES = (
