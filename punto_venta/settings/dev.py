@@ -54,7 +54,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.security.SecurityMiddleware',
 )
 
-ROOT_URLCONF = 'template.urls'
+ROOT_URLCONF = 'punto_venta.urls'
 
 
 DATABASES = {
@@ -84,7 +84,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'template.wsgi.application'
+WSGI_APPLICATION = 'punto_venta.wsgi.application'
 
 
 # Database
@@ -108,7 +108,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = '/webapps/glucosetracker/static/'
+STATIC_ROOT = '/webapps/punto_venta/static/'
 
 
 # Additional locations of static files
