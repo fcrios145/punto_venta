@@ -133,7 +133,6 @@ PIPELINE_CSS = {
     'libraries': {
         'source_filenames': (
             'bower_components/bootstrap/dist/css/bootstrap.css',
-            'test.sass',
         ),
         # Compress passed libraries and have
         # the output in`css/libs.min.css`.
